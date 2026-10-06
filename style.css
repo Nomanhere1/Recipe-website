@@ -1177,6 +1177,14 @@ ul, ol {
   background: linear-gradient(110deg, #F5EFEB 8%, #EFE8E1 18%, #F5EFEB 33%);
   background-size: 200% 100%;
 }
+.card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 15, 12, 0.45) 0%, rgba(20, 15, 12, 0.05) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
 .card-img {
   width: 100%;
   height: 100%;
@@ -1192,26 +1200,27 @@ ul, ol {
   position: absolute;
   top: 16px;
   left: 16px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   color: var(--color-text-main);
   font-size: 0.78rem;
   font-weight: 800;
   padding: 6px 14px;
   border-radius: var(--radius-full);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   letter-spacing: 0.03em;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  z-index: 2;
 }
 
 .card-time-badge {
   position: absolute;
   bottom: 14px;
   left: 16px;
-  background: rgba(25, 20, 18, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(22, 17, 14, 0.84);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #FFFFFF;
   font-size: 0.8rem;
   font-weight: 700;
@@ -1220,7 +1229,8 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
 /* Card Favorite Button */
@@ -1231,17 +1241,17 @@ ul, ol {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   transition: all var(--transition-bounce);
-  z-index: 2;
+  z-index: 3;
 }
 .card-fav-btn:hover {
   transform: scale(1.18);
